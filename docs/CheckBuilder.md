@@ -1,0 +1,332 @@
+# CheckBuilder
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**WebhookIds** | Pointer to **[]string** | An array of webhook ids describing which webhooks to trigger for this check. | [optional] 
+**ApplicantId** | **string** | The ID of the applicant to do the check on. | 
+**ApplicantProvidesData** | Pointer to **bool** | Send an applicant form to applicant to complete to proceed with check. Defaults to false. | [optional] [default to false]
+**Tags** | Pointer to **[]string** | Array of tags being assigned to this check. | [optional] 
+**RedirectUri** | Pointer to **string** | For checks where &#x60;applicant_provides_data&#x60; is &#x60;true&#x60;, redirect to this URI when the applicant has submitted their data. | [optional] 
+**ReportNames** | [**[]ReportName**](ReportName.md) | An array of report names (strings). | 
+**DocumentIds** | Pointer to **[]string** | Optional. An array of document ids, for use with Document reports only. If omitted, the Document report will use the most recently uploaded document by default. | [optional] 
+**Asynchronous** | Pointer to **bool** | Defaults to &#x60;true&#x60;. If set to &#x60;false&#x60;, you will only receive a response when all reports in your check have completed.  | [optional] [default to true]
+**SuppressFormEmails** | Pointer to **bool** | For checks where &#x60;applicant_provides_data&#x60; is &#x60;true&#x60;, applicant form will not be automatically sent if &#x60;suppress_form_emails&#x60; is set to &#x60;true&#x60;. You can manually send the form at any time after the check has been created, using the link found in the form_uri attribute of the check object. Write-only. Defaults to false.  | [optional] 
+**SubResult** | Pointer to **string** | Triggers responses for particular sub-results for sandbox Document reports. | [optional] 
+**Consider** | Pointer to [**[]ReportName**](ReportName.md) | Array of names of particular reports to return consider as their results. This is a feature available in sandbox testing | [optional] 
+**UsDrivingLicence** | Pointer to [**UsDrivingLicenceBuilder**](UsDrivingLicenceBuilder.md) |  | [optional] 
+
+## Methods
+
+### NewCheckBuilder
+
+`func NewCheckBuilder(applicantId string, reportNames []ReportName, ) *CheckBuilder`
+
+NewCheckBuilder instantiates a new CheckBuilder object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewCheckBuilderWithDefaults
+
+`func NewCheckBuilderWithDefaults() *CheckBuilder`
+
+NewCheckBuilderWithDefaults instantiates a new CheckBuilder object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetWebhookIds
+
+`func (o *CheckBuilder) GetWebhookIds() []string`
+
+GetWebhookIds returns the WebhookIds field if non-nil, zero value otherwise.
+
+### GetWebhookIdsOk
+
+`func (o *CheckBuilder) GetWebhookIdsOk() (*[]string, bool)`
+
+GetWebhookIdsOk returns a tuple with the WebhookIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWebhookIds
+
+`func (o *CheckBuilder) SetWebhookIds(v []string)`
+
+SetWebhookIds sets WebhookIds field to given value.
+
+### HasWebhookIds
+
+`func (o *CheckBuilder) HasWebhookIds() bool`
+
+HasWebhookIds returns a boolean if a field has been set.
+
+### GetApplicantId
+
+`func (o *CheckBuilder) GetApplicantId() string`
+
+GetApplicantId returns the ApplicantId field if non-nil, zero value otherwise.
+
+### GetApplicantIdOk
+
+`func (o *CheckBuilder) GetApplicantIdOk() (*string, bool)`
+
+GetApplicantIdOk returns a tuple with the ApplicantId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplicantId
+
+`func (o *CheckBuilder) SetApplicantId(v string)`
+
+SetApplicantId sets ApplicantId field to given value.
+
+
+### GetApplicantProvidesData
+
+`func (o *CheckBuilder) GetApplicantProvidesData() bool`
+
+GetApplicantProvidesData returns the ApplicantProvidesData field if non-nil, zero value otherwise.
+
+### GetApplicantProvidesDataOk
+
+`func (o *CheckBuilder) GetApplicantProvidesDataOk() (*bool, bool)`
+
+GetApplicantProvidesDataOk returns a tuple with the ApplicantProvidesData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplicantProvidesData
+
+`func (o *CheckBuilder) SetApplicantProvidesData(v bool)`
+
+SetApplicantProvidesData sets ApplicantProvidesData field to given value.
+
+### HasApplicantProvidesData
+
+`func (o *CheckBuilder) HasApplicantProvidesData() bool`
+
+HasApplicantProvidesData returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *CheckBuilder) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *CheckBuilder) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *CheckBuilder) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *CheckBuilder) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetRedirectUri
+
+`func (o *CheckBuilder) GetRedirectUri() string`
+
+GetRedirectUri returns the RedirectUri field if non-nil, zero value otherwise.
+
+### GetRedirectUriOk
+
+`func (o *CheckBuilder) GetRedirectUriOk() (*string, bool)`
+
+GetRedirectUriOk returns a tuple with the RedirectUri field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRedirectUri
+
+`func (o *CheckBuilder) SetRedirectUri(v string)`
+
+SetRedirectUri sets RedirectUri field to given value.
+
+### HasRedirectUri
+
+`func (o *CheckBuilder) HasRedirectUri() bool`
+
+HasRedirectUri returns a boolean if a field has been set.
+
+### GetReportNames
+
+`func (o *CheckBuilder) GetReportNames() []ReportName`
+
+GetReportNames returns the ReportNames field if non-nil, zero value otherwise.
+
+### GetReportNamesOk
+
+`func (o *CheckBuilder) GetReportNamesOk() (*[]ReportName, bool)`
+
+GetReportNamesOk returns a tuple with the ReportNames field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReportNames
+
+`func (o *CheckBuilder) SetReportNames(v []ReportName)`
+
+SetReportNames sets ReportNames field to given value.
+
+
+### GetDocumentIds
+
+`func (o *CheckBuilder) GetDocumentIds() []string`
+
+GetDocumentIds returns the DocumentIds field if non-nil, zero value otherwise.
+
+### GetDocumentIdsOk
+
+`func (o *CheckBuilder) GetDocumentIdsOk() (*[]string, bool)`
+
+GetDocumentIdsOk returns a tuple with the DocumentIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDocumentIds
+
+`func (o *CheckBuilder) SetDocumentIds(v []string)`
+
+SetDocumentIds sets DocumentIds field to given value.
+
+### HasDocumentIds
+
+`func (o *CheckBuilder) HasDocumentIds() bool`
+
+HasDocumentIds returns a boolean if a field has been set.
+
+### GetAsynchronous
+
+`func (o *CheckBuilder) GetAsynchronous() bool`
+
+GetAsynchronous returns the Asynchronous field if non-nil, zero value otherwise.
+
+### GetAsynchronousOk
+
+`func (o *CheckBuilder) GetAsynchronousOk() (*bool, bool)`
+
+GetAsynchronousOk returns a tuple with the Asynchronous field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAsynchronous
+
+`func (o *CheckBuilder) SetAsynchronous(v bool)`
+
+SetAsynchronous sets Asynchronous field to given value.
+
+### HasAsynchronous
+
+`func (o *CheckBuilder) HasAsynchronous() bool`
+
+HasAsynchronous returns a boolean if a field has been set.
+
+### GetSuppressFormEmails
+
+`func (o *CheckBuilder) GetSuppressFormEmails() bool`
+
+GetSuppressFormEmails returns the SuppressFormEmails field if non-nil, zero value otherwise.
+
+### GetSuppressFormEmailsOk
+
+`func (o *CheckBuilder) GetSuppressFormEmailsOk() (*bool, bool)`
+
+GetSuppressFormEmailsOk returns a tuple with the SuppressFormEmails field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSuppressFormEmails
+
+`func (o *CheckBuilder) SetSuppressFormEmails(v bool)`
+
+SetSuppressFormEmails sets SuppressFormEmails field to given value.
+
+### HasSuppressFormEmails
+
+`func (o *CheckBuilder) HasSuppressFormEmails() bool`
+
+HasSuppressFormEmails returns a boolean if a field has been set.
+
+### GetSubResult
+
+`func (o *CheckBuilder) GetSubResult() string`
+
+GetSubResult returns the SubResult field if non-nil, zero value otherwise.
+
+### GetSubResultOk
+
+`func (o *CheckBuilder) GetSubResultOk() (*string, bool)`
+
+GetSubResultOk returns a tuple with the SubResult field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubResult
+
+`func (o *CheckBuilder) SetSubResult(v string)`
+
+SetSubResult sets SubResult field to given value.
+
+### HasSubResult
+
+`func (o *CheckBuilder) HasSubResult() bool`
+
+HasSubResult returns a boolean if a field has been set.
+
+### GetConsider
+
+`func (o *CheckBuilder) GetConsider() []ReportName`
+
+GetConsider returns the Consider field if non-nil, zero value otherwise.
+
+### GetConsiderOk
+
+`func (o *CheckBuilder) GetConsiderOk() (*[]ReportName, bool)`
+
+GetConsiderOk returns a tuple with the Consider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConsider
+
+`func (o *CheckBuilder) SetConsider(v []ReportName)`
+
+SetConsider sets Consider field to given value.
+
+### HasConsider
+
+`func (o *CheckBuilder) HasConsider() bool`
+
+HasConsider returns a boolean if a field has been set.
+
+### GetUsDrivingLicence
+
+`func (o *CheckBuilder) GetUsDrivingLicence() UsDrivingLicenceBuilder`
+
+GetUsDrivingLicence returns the UsDrivingLicence field if non-nil, zero value otherwise.
+
+### GetUsDrivingLicenceOk
+
+`func (o *CheckBuilder) GetUsDrivingLicenceOk() (*UsDrivingLicenceBuilder, bool)`
+
+GetUsDrivingLicenceOk returns a tuple with the UsDrivingLicence field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsDrivingLicence
+
+`func (o *CheckBuilder) SetUsDrivingLicence(v UsDrivingLicenceBuilder)`
+
+SetUsDrivingLicence sets UsDrivingLicence field to given value.
+
+### HasUsDrivingLicence
+
+`func (o *CheckBuilder) HasUsDrivingLicence() bool`
+
+HasUsDrivingLicence returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
