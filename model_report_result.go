@@ -20,7 +20,7 @@ type ReportResult string
 
 // List of report_result
 const (
-	CLEAR ReportResult = "clear"
+	CLEAR_REPORT ReportResult = "clear"
 	CONSIDER ReportResult = "consider"
 	UNIDENTIFIED ReportResult = "unidentified"
 )
